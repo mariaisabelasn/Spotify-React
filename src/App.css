@@ -1,0 +1,31 @@
+body{
+  background-color: #000;
+  font-family: 'DM sans', sans-serif;
+}
+
+.grade {
+  display: grid;
+  grid-template-areas:
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.playlist-main {
+  grid-area: main;
+  margin: 12px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .grade {
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
